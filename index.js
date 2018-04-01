@@ -44,3 +44,28 @@ function randomIntStr(digit) {
 
 module.exports.randomIntStr = randomIntStr;
 
+// input: 0.005 2 -> '0.00'
+//        0.005 3 -> '0.005'
+function floorDecimalsStr(number, digit) {
+    if(digit === 0) {
+        return Math.floor(number).toString();
+    }
+    
+    const str = number.toString();
+    let result = '';
+    let dotFound = false;
+    let decimalsProcessed = 0;
+    for(let i = 0; i < str.length && decimalsProcessed < digit; i++) {
+        let nextChar = str[i];
+        result += nextChar;
+        if(dotFound) {
+            decimalsProcessed++;
+        } else if(nextChar === '.') {
+            dotFound = true;
+        }
+    }
+    
+    return result;
+}
+
+module.exports.floorDecimalsStr = floorDecimalsStr;
