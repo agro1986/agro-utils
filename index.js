@@ -69,3 +69,15 @@ function floorDecimalsStr(number, digit) {
 }
 
 module.exports.floorDecimalsStr = floorDecimalsStr;
+
+function dayToSecond(day) {
+    return day * 24 * 60 * 60;
+}
+
+module.exports.dayToSecond = dayToSecond;
+
+function minuteToSecond(minute) {
+    return minute * 60;
+}
+
+module.exports.minuteToSecond = minuteToSecond;
