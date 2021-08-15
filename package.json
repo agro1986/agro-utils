@@ -5,16 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress -p"
+    "build": "webpack --progress --mode=production"
   },
   "author": "Agro Rachmatullah",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
-    "regenerator": "^0.12.3",
-    "webpack": "^4.6.0",
-    "webpack-cli": "^2.0.14"
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-loader": "^8.2.2",
+    "regenerator": "^0.14.7",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.7.2"
   }
 }
