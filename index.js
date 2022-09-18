@@ -87,3 +87,17 @@ function sleep(ms) {
 }
 
 module.exports.sleep = sleep;
+
+function cap(x, min, max) {
+    if(x < min) {
+        return min;
+    }
+
+    if(x > max) {
+        return max;
+    }
+
+    return x;
+}
+
+module.exports.cap = cap;
